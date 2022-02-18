@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\begin{document}
+\begin{tikzpicture}
+	\node[circle, fill=Purple, draw, minimum size=11] () at (-0.915,-0.065) {};
+	\node[circle, fill=Green, draw, minimum size=15] () at (-3.84,0.025) {};
+
+	\node[anchor=east, inner sep=5pt] () at (0,0) {{\setmainfont{Quattrocento}\Huge Quatrefoil}};
+	\node[anchor=east, inner sep=7pt] () at (0,-0.75) {{\setmainfont{Parisienne}\large by Michael Purcell}};
+	
+	\node[circle, fill=Yellow, draw, minimum size=2.5, inner sep = 0pt] () at (-0.545,0.28) {};
+
+\path (0,-1.6) to (0,1);
+\end{tikzpicture}
+\end{document}
