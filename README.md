@@ -47,4 +47,4 @@ The game ends immediately when any player takes the stack action on their turn.
 Everyone wins if all of the tokens are in their correct positions when the game ends. If any token is not in its correct position, then everyone loses.
 
 ## Fun Facts
-As per Wikipedia, the word [quatrefoil](https://en.wikipedia.org/wiki/Quatrefoil) means "four leaves", from the Latin _quattuor_, "four", plus _folium_, "leaf"; the term refers specifically to a four-leafed clover, but applies in general to four-lobed shapes in various contexts.
+The word [quatrefoil](https://en.wikipedia.org/wiki/Quatrefoil) means "four leaves", from the Latin _quattuor_, "four", plus _folium_, "leaf". The term refers specifically to a four-leafed clover, but applies in general to four-lobed shapes in various contexts.
