@@ -1,5 +1,5 @@
 # Quatrefoil
-Quatrefoil is a cooperative puzzle game for four players that can be played in 10-15 minutes. It is suitable for all ages, but is intended for players who are eight years old or older.
+Quatrefoil is a cooperative puzzle game for four players that can be played in 5-10 minutes. It is suitable for all ages, but is intended for players who are eight years old or older.
 
 ## Components
   - __Tokens__ (5) -  one circular token in each of five colours: red, yellow, green, blue, and purple.  
@@ -9,7 +9,7 @@ Quatrefoil is a cooperative puzzle game for four players that can be played in 1
 ## Set Up
   1. Arrange four of the tokens in a square in the play area. This is the _quatrefoil_. The fifth token is the _free token_ and should be placed nearby.
 
-  2. Deal one colour card and one position card to each player. Players may look at their own cards, but not those dealt to other players.
+  2. Deal one colour card and one position card face down to each player. Players may look at their own cards, but not those dealt to other players.
 
   3. Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is _north_. This establishes a common frame of reference for the relative positions (northwest, northeast, southwest, and southeast) of the tokens in the quatrefoil.
 
@@ -35,7 +35,7 @@ On your turn you must take one of the following _actions_:
   - __Twist__ - Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise).
   - __Stack__ - Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
 
-Play proceeds to the left (clockwise). That is, after you finish your turn, the player to your left will go next.
+Play proceeds to the left (clockwise). That is, after you finish your turn the player to your left will go next.
 
 ### Communication
 During the game, communication between players is strictly limited. At any time, you may only indicate whether your token is in the correct position or not. If possible, this should be done using a simple nonverbal signal. Many players like to give a "thumbs up" gesture when their token is in the correct position and a "thumbs down" gesture otherwise.
@@ -47,4 +47,4 @@ The game ends immediately when any player takes the stack action on their turn.
 Everyone wins if all of the tokens are in their correct positions when the game ends. If any token is not in its correct position, then everyone loses.
 
 ## Fun Facts
-As per Wikipedia, the word [quatrefoil](https://en.wikipedia.org/wiki/Quatrefoil) means "four leaves", from the Latin _quattuor_, "four", plus _folium_, "leaf"; the term refers specifically to a four-leafed clover, but applies in general to four-lobed shapes in various contexts.
+The word [quatrefoil](https://en.wikipedia.org/wiki/Quatrefoil) means "four leaves", from the Latin _quattuor_, "four", plus _folium_, "leaf". The term refers specifically to a four-leafed clover, but applies in general to four-lobed shapes in various contexts.
