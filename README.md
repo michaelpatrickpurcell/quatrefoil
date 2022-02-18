@@ -1,5 +1,5 @@
 # Quatrefoil
-Quatrefoil is a cooperative puzzle game for four players that can be played in 10-15 minutes. It is suitable for all ages, but is intended for players who are eight years old or older.
+Quatrefoil is a cooperative puzzle game for four players that can be played in 5-10 minutes. It is suitable for all ages, but is intended for players who are eight years old or older.
 
 ## Components
   - __Tokens__ (5) -  one circular token in each of five colours: red, yellow, green, blue, and purple.  
