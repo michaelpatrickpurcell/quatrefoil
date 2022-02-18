@@ -25,7 +25,7 @@ You can end the game whenever you think that all of the tokens are in their corr
 ### Correct Positions
 The correct position for each token is specified by the colour cards and the position cards.
 
-The correct positions of four of the tokens are specified by the cards held by the players. These tokens should be in the quatrefoil. Each player's position card specifies the correct position for the token specified by their colour card.
+The correct positions of four of the tokens are specified by the cards held by the players. These tokens should be in the quatrefoil. Each player's position card specifies the correct relative position (NW, NE, SW, or SE) in the quatrefoil for the token specified by their colour card.
 
 The remaining token should should be the free token. Because it should not be in the quatrefoil, it does not have an associated position card.
 
