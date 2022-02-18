@@ -9,7 +9,7 @@ Quatrefoil is a cooperative puzzle game for four players that can be played in 5
 ## Set Up
   1. Arrange four of the tokens in a square in the play area. This is the _quatrefoil_. The fifth token is the _free token_ and should be placed nearby.
 
-  2. Deal one colour card and one position card to each player. Players may look at their own cards, but not those dealt to other players.
+  2. Deal one colour card and one position card face down to each player. Players may look at their own cards, but not those dealt to other players.
 
   3. Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is _north_. This establishes a common frame of reference for the relative positions (northwest, northeast, southwest, and southeast) of the tokens in the quatrefoil.
 
