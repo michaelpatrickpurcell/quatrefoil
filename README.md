@@ -16,7 +16,7 @@ Quatrefoil is a cooperative puzzle game for four players that can be played in 1
 ## Gameplay
 During the game, you will work together to solve a puzzle. The ways in which you can communicate with each other is limited (see below), so you you will need to be creative and attentive to effectively coordinate your efforts.
 
-Starting from a random configuration, your goal is to figure out how to get each token into its _correct position_. To do so you will take turns manipulating the quatrefoil in various ways.
+Starting from a random configuration, your goal is to figure out how to get each token into its _correct position_ (see below). To do so you will take turns manipulating the quatrefoil in various ways.
 
 First, however, you will first need to figure out what the correct position of each token is. At the outset, each player knows the correct position for one tile. Together, you will have to deduce the correct location of all of the tiles based on the actions that you collectively take and the little information that you are able to share with one another.
 
