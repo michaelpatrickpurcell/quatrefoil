@@ -14,7 +14,7 @@ Quatrefoil is a cooperative puzzle game for four players that can be played in 5
   3. Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is _north_. This establishes a common frame of reference for the relative positions (northwest, northeast, southwest, and southeast) of the tokens in the quatrefoil.
 
 ## Gameplay
-During the game, you will work together to solve a puzzle. The ways in which you can communicate with each other is limited (see below), so you you will need to be creative and attentive to effectively coordinate your efforts.
+During the game, you will work together to solve a puzzle. The ways in which you can communicate with each other are limited (see below), so you you will need to be creative and attentive to effectively coordinate your efforts.
 
 Starting from a random configuration, your goal is to figure out how to get each token into its _correct position_ (see below). To do so you will take turns manipulating the quatrefoil in various ways.
 
