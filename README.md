@@ -48,7 +48,8 @@ On your turn you must take one of the following _actions_:
   - __Stack__ - Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
 
   ![Stack Diagram](stack_diagram.png)
-
+  The free token (yellow) is placed on top of the quatrefoil.
+  
 Play proceeds to the left (clockwise). That is, after you finish your turn the player to your left will go next.
 
 ### Communication
