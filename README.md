@@ -31,7 +31,7 @@ The remaining token should should be the free token. Because it should not be in
 
 ### Player turns
 On your turn you must take one of the following _actions_:
-  - __Push__ - Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil. Notice that this will also eject a token from the quatrefoil. The ejected token becomes the free token for the next player's turn. ![Push animation](push_animation.gif])
+  - __Push__ - Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil. Notice that this will also eject a token from the quatrefoil. The ejected token becomes the free token for the next player's turn. ![Push animation](push_animation.gif)
   - __Twist__ - Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise). ![Twist animation](twist_animation_anticlockwise.gif)
   - __Stack__ - Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
 
