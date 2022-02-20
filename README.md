@@ -34,10 +34,20 @@ On your turn you must take one of the following _actions_:
   - __Push__ - Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil. Notice that this will also eject a token from the quatrefoil. The ejected token becomes the free token for the next player's turn.
   <!-- ![Push animation](push_animation.gif) -->
   ![Push Row Diagram](push_row_diagram.png)
-  ![Push Column Diagram](push_column_diagram.pdf)
+  The free token (yellow) is pushed into the top row of the quatrefoil.
+  
+  ![Push Column Diagram](push_column_diagram.png)
+  The free token (yellow) is pushed into the right column of the quatrefoil.
+  - __Twist__ - Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise).
+  <!-- ![Twist animation](twist_animation.gif) -->
+  ![Twist Clockwise Diagram](twist_clockwise_diagram.png)
+  The quatrefoil is twisted clockwise.
 
-  - __Twist__ - Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise). ![Twist animation](twist_animation.gif)
+  ![Twist Anticlockwise Diagram](twist_anticlockwise_diagram.png)
+  The quatrefoil is twisted anticlockwise.
   - __Stack__ - Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
+
+  ![Stack Diagram](stack_diagram.png)
 
 Play proceeds to the left (clockwise). That is, after you finish your turn the player to your left will go next.
 
