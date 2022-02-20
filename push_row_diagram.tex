@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm, y=1cm]
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Yellow] () at (0,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Blue] () at (2,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Green] () at (4,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Purple] () at (2,-2) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Red] () at (4,-2) {};
+
+\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5cm, minimum width=2cm] () at (7,-1) {\phantom{M}};
+
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Yellow] () at (10,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Blue] () at (12,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Green] () at (14,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Purple] () at (11,-2) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Red] () at (13,-2) {};
+
+\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5cm, minimum width=2cm] () at (17,-1) {\phantom{M}};
+
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Yellow] () at (20,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Blue] () at (22,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Green] () at (24,0) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Purple] () at (20,-2) {};
+\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2cm, fill=Red] () at (22,-2) {};
+
+\path (-1.25, -3.25) to (25.25,1.25);
+\end{tikzpicture}
+\end{document}
