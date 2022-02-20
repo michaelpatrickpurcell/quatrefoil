@@ -49,8 +49,9 @@ On your turn you must take one of the following _actions_:
 
   ![Stack Diagram](stack_diagram.png)
   The free token (yellow) is placed on top of the quatrefoil.
-  
-Play proceeds to the left (clockwise). That is, after you finish your turn the player to your left will go next.
+
+### Turn Order  
+Play proceeds to the left (clockwise). That is, after you finish your turn the player to your left will take the next turn.
 
 ### Communication
 During the game, communication between players is strictly limited. At any time, you may only indicate whether your token is in the correct position or not. If possible, this should be done using a simple nonverbal signal. Many players like to give a "thumbs up" gesture when their token is in the correct position and a "thumbs down" gesture otherwise.
