@@ -31,6 +31,7 @@ You can end the game whenever you think that all of the tokens are in their corr
   3. Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is _north_. This establishes a common frame of reference for the relative positions (northwest, northeast, southwest, and southeast) of the tokens in the quatrefoil.
 
 ![Set Up Diagram](setup_diagram.png)
+The play area after the set up is complete.
 
 ## Correct Positions
 The correct position for each token is specified by the colour cards and the position cards.
