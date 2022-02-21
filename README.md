@@ -12,7 +12,7 @@ Quatrefoil is a cooperative puzzle game for four players that can be played in 5
 
   ![Position Cards Diagram](position_cards_diagram.png)
 
-  Notice that the backs of the colour cards and the position cards are different colours.
+  Notice that the backs of the colour cards are red and the backs of the position cards are blue.
 
 ## Overview
 During the game, you will work together to solve a puzzle. The ways in which you can communicate with each other are limited (see below), so you you will need to be creative and attentive to effectively coordinate your efforts.
