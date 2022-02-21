@@ -23,16 +23,6 @@
 \setlength{\vertspace}{0.0625in}
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
-\tikzset{guidestar/.pic={
-	\draw (-2\bleed - \horizspace/2,0) -- (2\bleed + \horizspace/2, 0);
-	\draw (-\horizspace/2, \vertspace/2 + \bleed) -- 	(\horizspace/2, \vertspace/2 + \bleed);
-	\draw (-\horizspace/2, -\vertspace/2 - \bleed) -- 	(\horizspace/2, -\vertspace/2 - \bleed);
-
-	\draw (0, -2\bleed - \vertspace/2) -- (0, 2\bleed + \vertspace/2);
-	\draw (-\horizspace/2 - \bleed, -\vertspace/2) -- (-\horizspace/2 - \bleed, \vertspace/2);
-	\draw (\horizspace/2 + \bleed, -\vertspace/2) -- (\horizspace/2 + \bleed, \vertspace/2);
-}}
-
 \tikzset{guidecross/.pic={
 	\draw (-\bleed,0) -- (\bleed,0);
 	\draw (0, -\bleed) -- (0, \bleed);
@@ -105,7 +95,7 @@
 	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
-	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+%	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
 	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5) {};
 	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 	% Cutting guides for corners of the cards	
@@ -125,7 +115,7 @@
 	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
-	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+%	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
 	\pic () at (0,-0.5) {#1};
 	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 	% Cutting guides for corners of the cards	

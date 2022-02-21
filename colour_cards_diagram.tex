@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{math}
+\usepackage{fontspec}
+
+\tikzset{colorcardfront/.pic={
+	\node[draw, ultra thick, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5in) {};
+	\node () at (0, 1.125in) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+}}
+
+\begin{document}
+\begin{tikzpicture}[x=1in, y=1in]
+\path (-13.25,-2) to (13.25, 2);
+\pic () at (-7,0) {colorcardfront={Blue}};
+\pic () at (-3.5,0) {colorcardfront={Green}};
+\pic () at (0,0) {colorcardfront={Purple}};
+\pic () at (3.5,0) {colorcardfront={Red}};
+\pic () at (7,0) {colorcardfront={Yellow}};
+\end{tikzpicture}
+\end{document}
