@@ -31,6 +31,11 @@
 	\node[draw, ultra thick, circle, fill=#1, inner sep=0pt, minimum size=2in] () at (0,0) {};
 }}
 
+\tikzset{smalltoken/.pic={
+	\node[draw, circle, minimum size=1in, ultra thick, fill=#1] () at (0,0) {};
+
+}}
+
 \tikzset{guidecross/.pic={
 	\draw (-\bleed,0) -- (\bleed,0);
 	\draw (0, -\bleed) -- (0, \bleed);
@@ -44,31 +49,31 @@
 }}
 
 \tikzset{Northwest/.pic={
-	\node[draw, circle, minimum size=1in, ultra thick, fill=gray] () at (-0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (-0.5,-0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (0.5,-0.5) {};
+	\pic () at (-0.5,0.5) {smalltoken={gray}};
+	\pic () at (0.5,0.5) {smalltoken={white}};
+	\pic () at (-0.5,-0.5) {smalltoken={white}};
+	\pic () at (0.5,-0.5) {smalltoken={white}};
 }}
 
 \tikzset{Northeast/.pic={
-	\node[draw, circle, minimum size=1in, ultra thick] () at (-0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick, fill=gray] () at (0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (-0.5,-0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (0.5,-0.5) {};
+	\pic () at (-0.5,0.5) {smalltoken={white}};
+	\pic () at (0.5,0.5) {smalltoken={gray}};
+	\pic () at (-0.5,-0.5) {smalltoken={white}};
+	\pic () at (0.5,-0.5) {smalltoken={white}};
 }}
 
 \tikzset{Southwest/.pic={
-	\node[draw, circle, minimum size=1in, ultra thick] () at (0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick, fill=gray] () at (-0.5,-0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (-0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (0.5,-0.5) {};
+	\pic () at (-0.5,0.5) {smalltoken={white}};
+	\pic () at (0.5,0.5) {smalltoken={white}};
+	\pic () at (-0.5,-0.5) {smalltoken={gray}};
+	\pic () at (0.5,-0.5) {smalltoken={white}};
 }}
 
 \tikzset{Southeast/.pic={
-	\node[draw, circle, minimum size=1in, ultra thick] () at (-0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (0.5,0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick] () at (-0.5,-0.5) {};
-	\node[draw, circle, minimum size=1in, ultra thick, fill=gray] () at (0.5,-0.5) {};
+	\pic () at (-0.5,0.5) {smalltoken={white}};
+	\pic () at (0.5,0.5) {smalltoken={white}};
+	\pic () at (-0.5,-0.5) {smalltoken={white}};
+	\pic () at (0.5,-0.5) {smalltoken={gray}};
 }}
 
 
