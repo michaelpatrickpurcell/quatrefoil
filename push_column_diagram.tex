@@ -1,18 +1,15 @@
 \documentclass{standalone}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{tikz}
-\usetikzlibrary{shapes}
+\usepackage{quatrefoil}
 
 \begin{document}
 \begin{tikzpicture}[x=1in, y=1in]
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Yellow] () at (3,2) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Blue] () at (1,0) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Green] () at (3,0) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Purple] () at (1,-2) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Red] () at (3,-2) {};
+\pic () at (3,2) {token={Yellow}};
+\pic () at (1,0) {token={Blue}};
+\pic () at (3,0) {token={Green}};
+\pic () at (1,-2) {token={Purple}};
+\pic () at (3,-2) {token={Red}};
 
-%\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5in, minimum width=2in] () at (7,-1) {\phantom{M}};
-\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5in, minimum width=2in] () at (7,-1) {\phantom{M}};
+\pic () at (7,-1) {nextarrow};
 
 \node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Yellow] () at (13,1) {};
 \node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Blue] () at (11,0) {};
@@ -20,16 +17,20 @@
 \node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Purple] () at (11,-2) {};
 \node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Red] () at (13,-3) {};
 
-%\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5in, minimum width=2in] () at (15,-1) {\phantom{M}};
-\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5in, minimum width=2in] () at (17,-1) {\phantom{M}};
+\pic () at (13,1) {token={Yellow}};
+\pic () at (11,0) {token={Blue}};
+\pic () at (13,-1) {token={Green}};
+\pic () at (11,-2) {token={Purple}};
+\pic () at (13,-3) {token={Red}};
 
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Blue] () at (21,0) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Yellow] () at (23,0) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Purple] () at (21,-2) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Green] () at (23,-2) {};
-\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=Red] () at (23,-4) {};
+\pic () at (17,-1) {nextarrow};
 
-%\path (-1.5, -5.25) to (23.5,3.25);
+\pic () at (21,0) {token={Blue}};
+\pic () at (23,0) {token={Yellow}};
+\pic () at (21,-2) {token={Purple}};
+\pic () at (23,-2) {token={Green}};
+\pic () at (23,-4) {token={Red}};
+
 \path (-1.25, -5.25) to (25.25,3.25);
 
 \end{tikzpicture}

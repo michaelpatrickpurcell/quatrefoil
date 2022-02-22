@@ -1,6 +1,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{math}
+\usetikzlibrary{shapes}
+\usepackage{calc}
 \usepackage{fontspec}
 
 
@@ -20,9 +22,25 @@
 \setlength{\vertspace}{0.0625in}
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
+\tikzset{nextarrow/.pic={
+	\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=2.5in, minimum width=2in] () at (0,0) {\phantom{M}};
+}}
+
+
+\tikzset{token/.pic={
+	\node[draw, ultra thick, circle, fill=#1, inner sep=0pt, minimum size=2in] () at (0,0) {};
+}}
+
 \tikzset{guidecross/.pic={
 	\draw (-\bleed,0) -- (\bleed,0);
 	\draw (0, -\bleed) -- (0, \bleed);
+}}
+
+\tikzset{cutguide/.pic={
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
 }}
 
 \tikzset{Northwest/.pic={
@@ -54,15 +72,7 @@
 }}
 
 
-\tikzset{cardback/.pic={
-	\begin{scope}
-	\clip (-\cardwidth/2 - \bleed, 0in) --%
-	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
-	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
-	      cycle;
-%	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in] () at (0,0) {};
+\tikzset{cardbackpattern/.pic={
 	\foreach \i in {-1.25, -1.0,...,1.25}
 		\foreach \j in {-1.75, -1.5, ..., 1.75}
 			\draw[very thick, #1] (\i,\j) circle (0.105);
@@ -70,17 +80,9 @@
 	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
 		\foreach \j in {-1.875, -1.625, ..., 1.875}
 			\draw[very thick, #1] (\i,\j) circle (0.105);
-		
-	% Cutting guides for corners of the cards	
-	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
-	
-\end{scope}
 }}
 
-\tikzset{colorcardfront/.pic={
+\tikzset{cardbackprintable/.pic={
 	\begin{scope}
 	\clip (-\cardwidth/2 - \bleed, 0in) --%
 	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
@@ -88,19 +90,34 @@
 	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
-%	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
-	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5) {};
+	% Pattern for card back
+	\pic () at (0,0) {cardbackpattern={#1}};
+	% Cutting guides for corners of the cards	
+	\pic () at (0,0) {cutguide};
+\end{scope}
+}}
+
+\tikzset{cardbackdisplay/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2, 0in) --%
+	      (-\cardwidth/2, \cardheight/2) --%
+	      (\cardwidth/2, \cardheight/2) --%
+	      (\cardwidth/2, -\cardheight/2) --%
+	      (-\cardwidth/2, -\cardheight/2) --%
+	      cycle;
+	% Pattern for card back
+	\pic () at (0,0) {cardbackpattern={#1}};
+\end{scope}
+	\node[draw, ultra thick, rounded corners=0.125in, inner sep=0pt, minimum height=3.5in, minimum width=2.5in] () at (0,0) {};
+}}
+
+\tikzset{colorcardfrontpattern/.pic={
+%	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5) {};
+	\pic () at (0,-0.5) {token={#1}};
 	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
-	% Cutting guides for corners of the cards	
-	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
-	
-\end{scope}
 }}
 
-\tikzset{positioncardfront/.pic={
+\tikzset{colorcardfrontprintable/.pic={
 	\begin{scope}
 	\clip (-\cardwidth/2 - \bleed, 0in) --%
 	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
@@ -108,15 +125,41 @@
 	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
-%	\node[inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+	% Pattern for card front
+	\pic () at (0,0) {colorcardfrontpattern={#1}};
+	% Cutting guides for corners of the cards	
+	\pic () at (0,0) {cutguide};
+\end{scope}
+}}
+
+\tikzset{colorcardfrontdisplay/.pic={
+	\node[draw, ultra thick, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5in) {};
+	\node () at (0, 1.125in) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+}}
+
+\tikzset{positioncardfrontpattern/.pic={
 	\pic () at (0,-0.5) {#1};
 	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+}}
+
+\tikzset{positioncardfrontprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	% Pattern for card front
+	\pic () at (0,0) {positioncardfrontpattern={#1}};
 	% Cutting guides for corners of the cards	
-	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
-	
+	\pic () at (0,0) {cutguide};	
 \end{scope}
 }}
 
+\tikzset{positioncardfrontdisplay/.pic={
+	% Pattern for card front
+	\pic () at (0,0) {positioncardfrontpattern={#1}};
+	\node[draw, inner sep=0pt, ultra thick, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+}}
