@@ -4,13 +4,13 @@ Quatrefoil is a cooperative puzzle game for four players that can be played in 5
 ## Components
   - __Tokens__ (5) -  one circular token in each of five colours: blue, green, purple, red, and yellow.
 
-  ![Tokens Diagram](tokens_diagram.png)
+  ![Tokens Diagram](Images/tokens_diagram.png)
   - __Colour Cards__ (5) - one for each colour.
 
-  ![Colour Cards Diagram](colour_cards_diagram.png)
+  ![Colour Cards Diagram](Images/colour_cards_diagram.png)
   - __Position Cards__ (4) - one for each of four ordinal directions: northwest, northeast, southwest, and southeast.
 
-  ![Position Cards Diagram](position_cards_diagram.png)
+  ![Position Cards Diagram](Images/position_cards_diagram.png)
 
   Notice that the backs of the colour cards are red and the backs of the position cards are blue.
 
@@ -30,7 +30,7 @@ You can end the game whenever you think that all of the tokens are in their corr
 
   3. Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is _north_. This establishes a common frame of reference for the relative positions (northwest, northeast, southwest, and southeast) of the tokens in the quatrefoil.
 
-![Set Up Diagram](setup_diagram.png)
+![Set Up Diagram](Images/setup_diagram.png)
 The play area after the set up is complete.
 
 ## Correct Positions
@@ -44,17 +44,17 @@ The remaining token should should be the free token. Because it should not be in
 On your turn you must take one of the following _actions_:
   - __Push__ - Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil. Notice that this will also eject a token from the quatrefoil. The ejected token becomes the free token for the next player's turn.
   <!-- ![Push animation](push_animation.gif) -->
-  ![Push Row Diagram](push_row_diagram.png)
+  ![Push Row Diagram](Images/push_row_diagram.png)
   The free token (yellow) is pushed into the top row of the quatrefoil. The green token is ejected from the quatrefoil and will become the free token for the next player's turn.
 
-  ![Push Column Diagram](push_column_diagram.png)
+  ![Push Column Diagram](Images/push_column_diagram.png)
   The free token (yellow) is pushed into the right column of the quatrefoil. The red token is ejected from the quatrefoil and will become the free token for the next player's turn.
   - __Twist__ - Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise).
   <!-- ![Twist animation](twist_animation.gif) -->
-  ![Twist Clockwise Diagram](twist_clockwise_diagram.png)
+  ![Twist Clockwise Diagram](Images/twist_clockwise_diagram.png)
   The quatrefoil is twisted clockwise.
 
-  ![Twist Anticlockwise Diagram](twist_anticlockwise_diagram.png)
+  ![Twist Anticlockwise Diagram](Images/twist_anticlockwise_diagram.png)
   The quatrefoil is twisted anticlockwise.
   - __Stack__ - Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
 
