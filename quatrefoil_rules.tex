@@ -1,8 +1,303 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper, parskip=half, DIV=14, 12pt]{scrartcl}
 \usepackage{quatrefoil}
+%\usepackage[margin=1in]{geometry}
 \usepackage{multicol}
+\setlength\columnsep{3em}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{scrlayer-scrpage} % Manage headers and footers in Koma-Script document classes
 
+\usepackage[hidelinks]{hyperref} % Add hyperlinks to the pdf file. This should usually be the last package loaded before \begin{document}
+
+\makeatletter
+\newcommand{\version}[1]{\newcommand{\@version}{#1}}
+\makeatother
+
+% Set header
+\clearpairofpagestyles
+\makeatletter
+\cfoot*{\normalshape Version \@version}
+\makeatother
+
+% Minimize unwanted hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\setkomafont{section}{\setmainfont{Quattrocento}\Large\bfseries}
+\setkomafont{descriptionlabel}{\setmainfont{Quattrocento}\normalsize\bfseries}
+
+\RedeclareSectionCommand[
+  runin=false,
+  afterindent=false,
+  beforeskip=0pt,%0.25\baselineskip,
+  afterskip=0ex,%,0.125\baselineskip,
+]{section}
+
+\version{0.1}
+%\pagestyle{empty}
 \begin{document}
+{%
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=2.75, transform shape]
+	\node[circle, fill=Yellow, draw, minimum size=15] () at (-0.9925,-0.035) {};
+	\node[circle, fill=Green, draw, minimum size=15] () at (-4,-0.035) {};
+	\node[circle, fill=Red, draw, minimum size=15] () at (-4,-0.7) {};
+	\node[circle, fill=Purple, draw, minimum size=15] () at (-4.665, -0.7) {};
+	\node[circle, fill=Blue, draw, minimum size=15] () at (-4.665,-0.035) {};
 
-test
+	\node[anchor=east, inner sep=5pt] () at (0,0) {{\setmainfont{Quattrocento}\Huge uatrefOil}};
+	\node[anchor=east, inner sep=7pt] () at (0,-0.8) {{\setmainfont{Parisienne}by Michael Purcell}};
+%		\node[anchor=east, inner sep=5pt] () at (0,-1.25) {{\setmainfont[Scale=0.985]{Quattrocento}A puzzle game for four players}};
+
+	\node[rotate=0] () at (-4, -0.09) {{\setmainfont{Quattrocento}\Huge Q}};
+	\node[rotate=-90] () at (-4.055, -0.7) {{\setmainfont{Quattrocento}\Huge Q}};
+	\node[rotate=180] () at (-4.665, -0.645) {{\setmainfont{Quattrocento}\Huge Q}};
+	\node[rotate=90] () at (-4.610, -0.035) {{\setmainfont{Quattrocento}\Huge Q}};
+\end{tikzpicture}
+\end{figure}%
+}%
+\vspace{-0.75cm}
+\setmainfont{Quattrocento Sans}
+\raggedright
+\begin{multicols}{2}
+\section*{Overview}
+Quatrefoil is a cooperative puzzle game for four players that can be played in 5-10 minutes. It intended for players who are at least eight years old.% or older.
+
+During the game, you will work together to solve a puzzle. The ways in which you can communicate with each other are limited, however, so you you will need to be creative and attentive to effectively coordinate your efforts.
+
+You can end the game whenever you think that you have solved the puzzle. If you are right, then everyone wins.  If not, then everyone loses.
+
+\rule{0pt}{0.5cm}
+
+\section*{Components}
+\begin{description}[leftmargin=0pt, labelsep=\widthof{\ }]
+	\item[Tokens (5) \textendash] One circular token in five colours: blue, green, purple, red, yellow.
+	\begin{center}
+	\begin{tikzpicture}[scale=0.15, transform shape, x=1in, y=1in]
+		\pic () at (0,0) {token2={Blue}};
+		\pic () at (3,0) {token2={Green}};
+		\pic () at (6,0) {token2={Purple}};
+		\pic () at (9,0) {token2={Red}};
+		\pic () at (12,0) {token2={Yellow}};
+	\end{tikzpicture}
+	\end{center}
+	\item[Colour Cards (5) \textendash] One for each colour.%The backs of the colour cards are red.
+	\begin{center}
+	\begin{tikzpicture}[scale=0.15, transform shape, x=1in, y=1in]
+		\pic at (0,0) {colorcardfrontdisplay2={Blue}};
+		\pic at (3,0) {colorcardfrontdisplay2={Green}};
+		\pic at (6,0) {colorcardfrontdisplay2={Purple}};
+		\pic at (9,0) {colorcardfrontdisplay2={Red}};
+		\pic at (12,0) {colorcardfrontdisplay2={Yellow}};
+	\end{tikzpicture}
+	\end{center}
+	\item[Position Cards (4) \textendash] One for each of the ordinal directions: northwest, northeast, southwest, southeast.%The backs of the position cards are blue.
+	\begin{center}	
+	\begin{tikzpicture}[scale=0.15, transform shape, x=1in, y=1in]
+		\pic at (0,0) {positioncardfrontdisplay2={Northwest}};
+		\pic at (3,0) {positioncardfrontdisplay2={Northeast}};
+		\pic at (6,0) {positioncardfrontdisplay2={Southwest}};
+		\pic at (9,0) {positioncardfrontdisplay2={Southeast}};
+	\end{tikzpicture}
+	\end{center}
+\end{description}
+\end{multicols}%
+\vfill
+\begin{multicols}{2}
+\section*{Set Up}
+\begin{enumerate}[leftmargin=*, itemindent=0pt]
+	\item Arrange four of the tokens in a square in the play area. This is the \emph{quatrefoil}. The fifth token is the \emph{free token} and should be placed nearby.
+	\item Deal one colour card and one position card face down to each player. You may look at your own cards, but not those dealt to other players.
+	\item Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is \emph{north}.
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.15, x=1in, y=1in, transform shape]
+\pic () at (-2.25,1) {token2={Blue}};
+\pic () at (-0.25,1) {token2={Green}};
+\pic () at (-2.25,-1) {token2={Purple}};
+\pic () at (-0.25,-1) {token2={Red}};
+\pic () at (2,0) {token2={Yellow}};
+
+\pic () at (-1.75,8.75) {cardbackdisplay2={Blue}};
+\pic () at (1.75,8.75) {cardbackdisplay2={Red}};
+\path (0,0) to (0,12);
+
+\pic[rotate=90] at (5.25,1.75) {cardbackdisplay2={Blue}};
+\pic[rotate=90] at (5.25,-1.75) {cardbackdisplay2={Red}};
+
+\pic () at (-1.75,-5.25) {cardbackdisplay2={Red}};
+\pic () at (1.75,-5.25) {cardbackdisplay2={Blue}};
+
+\pic[rotate=90] at (-5.5,1.75) {cardbackdisplay2={Red}};
+\pic[rotate=90] at (-5.5,-1.75) {cardbackdisplay2={Blue}};
+
+\pic[rotate=90] at (0,4.75) {cardbackdisplay2={Red}};
+\end{tikzpicture}%
+\captionof*{figure}{\emph{The play area after set up is complete.}}
+\end{center}%
+\end{multicols}%
+\newpage
+\begin{multicols}{2}
+\section*{Player Turns}
+On your turn you must take one of the following \emph{actions}:
+ \begin{description}[leftmargin=0pt, labelsep=\widthof{\ }]
+	\item[Push \textendash] Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil.
+	\vfill
+	\begin{center}
+	\begin{tikzpicture}[scale=0.1, x=1in, y=1in, transform shape]
+\pic () at (0,0) {token2={Yellow}};
+\pic () at (2,0) {token2={Blue}};
+\pic () at (4,0) {token2={Green}};
+\pic () at (2,-2) {token2={Purple}};
+\pic () at (4,-2) {token2={Red}};
+
+\pic () at (7,-1) {nextarrow};
+
+\pic () at (10,0) {token2={Yellow}};
+\pic () at (12,0) {token2={Blue}};
+\pic () at (14,0) {token2={Green}};
+\pic () at (11,-2) {token2={Purple}};
+\pic () at (13,-2) {token2={Red}};
+
+\pic () at (17,-1) {nextarrow};
+
+\pic () at (20,0) {token2={Yellow}};
+\pic () at (22,0) {token2={Blue}};
+\pic () at (24,0) {token2={Green}};
+\pic () at (20,-2) {token2={Purple}};
+\pic () at (22,-2) {token2={Red}};
+	\end{tikzpicture}
+	\captionof*{figure}{\emph{Pushing the free token into a row.}}
+	\end{center}
+		\begin{center}
+	\begin{tikzpicture}[scale=0.1, x=1in, y=1in, transform shape]
+\pic () at (3,2) {token2={Yellow}};
+\pic () at (1,0) {token2={Blue}};
+\pic () at (3,0) {token2={Green}};
+\pic () at (1,-2) {token2={Purple}};
+\pic () at (3,-2) {token2={Red}};
+
+\pic () at (7,-1) {nextarrow};
+
+\pic () at (13,1) {token2={Yellow}};
+\pic () at (11,0) {token2={Blue}};
+\pic () at (13,-1) {token2={Green}};
+\pic () at (11,-2) {token2={Purple}};
+\pic () at (13,-3) {token2={Red}};
+
+\pic () at (17,-1) {nextarrow};
+
+\pic () at (21,0) {token2={Blue}};
+\pic () at (23,0) {token2={Yellow}};
+\pic () at (21,-2) {token2={Purple}};
+\pic () at (23,-2) {token2={Green}};
+\pic () at (23,-4) {token2={Red}};
+	\end{tikzpicture}
+	\captionof*{figure}{\emph{Pushing the free token into a column.}}
+	\end{center}
+ 	Notice that this will also eject a token from the quatrefoil. The ejected token becomes the free token for the next player's turn.
+	\item[Twist \textendash] Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise).
+	\vfill
+	\begin{center}
+	\begin{tikzpicture}[scale=0.1, x=1in, y=1in, transform shape]
+	\pic () at (1,0) {token2={Blue}};
+	\pic () at (3,0) {token2={Green}};
+	\pic () at (1,-2) {token2={Purple}};
+	\pic () at (3,-2) {token2={Red}};
+
+	\pic () at (7,-1) {nextarrow};
+
+	\pic[rotate around={-45:(1,-1)}] () at (11,0) {token2={Blue}};
+	\pic[rotate around={-45:(-1,-1)}] () at (13,0) {token2={Green}};
+	\pic[rotate around={-45:(1,1)}] () at (11,-2) {token2={Purple}};
+	\pic[rotate around={-45:(-1,1)}] () at (13,-2) {token2={Red}};
+
+	\pic () at (17,-1) {nextarrow};
+
+	\pic[rotate around={-90:(1,-1)}] () at (21,0) {token2={Blue}};
+	\pic[rotate around={-90:(-1,-1)}] () at (23,0) {token2={Green}};
+	\pic[rotate around={-90:(1,1)}] () at (21,-2) {token2={Purple}};
+	\pic[rotate around={-90:(-1,1)}] () at (23,-2) {token2={Red}};
+	\end{tikzpicture}
+	\captionof*{figure}{\emph{Twisting the quatrefoil clockwise.}}
+	\end{center}
+	
+	\begin{center}
+	\begin{tikzpicture}[scale=0.1, x=1in, y=1in, transform shape]
+	\pic () at (1,0) {token2={Blue}};
+	\pic () at (3,0) {token2={Green}};
+	\pic () at (1,-2) {token2={Purple}};
+	\pic () at (3,-2) {token2={Red}};
+
+	\pic () at (7,-1) {nextarrow};
+
+	\pic[rotate around={45:(1,-1)}] () at (11,0) {token2={Blue}};
+	\pic[rotate around={45:(-1,-1)}] () at (13,0) {token2={Green}};
+	\pic[rotate around={45:(1,1)}] () at (11,-2) {token2={Purple}};
+	\pic[rotate around={45:(-1,1)}] () at (13,-2) {token2={Red}};
+
+	\pic () at (17,-1) {nextarrow};
+
+	\pic[rotate around={90:(1,-1)}] () at (21,0) {token2={Blue}};
+	\pic[rotate around={90:(-1,-1)}] () at (23,0) {token2={Green}};
+	\pic[rotate around={90:(1,1)}] () at (21,-2) {token2={Purple}};
+	\pic[rotate around={90:(-1,1)}] () at (23,-2) {token2={Red}};
+	\end{tikzpicture}
+	\captionof*{figure}{\emph{Twisting the quatrefoil anticlockwise.}}
+	\end{center}
+
+	\item[Stack \textendash] Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
+	\vfill
+	\begin{center}
+	\begin{tikzpicture}[scale=0.1, x=1in, y=1in, transform shape]
+	\pic () at (1,0) {token2={Blue}};
+	\pic () at (3,0) {token2={Green}};
+	\pic () at (1,-2) {token2={Purple}};
+	\pic () at (3,-2) {token2={Red}};
+	\pic () at (-3,-1) {token2={Yellow}};
+
+	\pic () at (7,-1) {nextarrow};
+
+	\pic () at (11,0) {token2={Blue}};
+	\pic () at (13,0) {token2={Green}};
+	\pic () at (11,-2) {token2={Purple}};
+	\pic () at (13,-2) {token2={Red}};
+	\pic () at (12,-1) {token2={Yellow}};
+	\end{tikzpicture}
+	\captionof*{figure}{\emph{Stacking the free token on the quatrefoil.}}
+	\end{center}
+\end{description}
+\vfill\null
+\columnbreak
+\section*{Turn Order}
+Play proceeds to the left (clockwise). That is, after you finish your turn the player to your left will take the next turn.
+
+\section*{Correct Positions}
+The colour cards and the position cards together specify the correct position for each token.
+
+The correct positions of four of the tokens are specified by the cards held by the players. These tokens should be in the quatrefoil. Your position card specifies the correct position in the quatrefoil for the token specified by your colour card.
+
+The remaining token should should be the free token. Because it should not be in the quatrefoil, it does not have an associated position card.
+
+\section*{Communication}
+During the game, communication between players is strictly limited. At any time, you may only indicate whether your token is in the correct position or not.
+
+This should be done using a simple nonverbal signal. Many players like to give a ``thumbs up'' gesture when their token is in the correct position and a ``thumbs down'' gesture otherwise.
+
+\section*{Winning the Game}
+The game ends immediately when any player takes the stack action.
+
+Everyone wins if all of the tokens are in their correct positions when the game ends. Otherwise, everyone loses.%Everyone loses if any token is not in its correct position.%, then everyone loses.
+\vfill%\null
+\textbf{Contact}: \href{mailto:quatrefoil.game@gmail.com}{quatrefoil.game@gmail.com}
+
+\begin{tabular}{@{}m{\columnwidth-\widthof{\Huge{\doclicenseIcon}}-0.5cm}@{\hspace{0.05cm}}m{\widthof{\Huge{\doclicenseIcon}}}@{}}
+{This work is licensed under a\newline ``CC BY 4.0'' license.} & \Huge{\doclicenseIcon}\\
+\end{tabular}
+
+\end{multicols}
 \end{document}

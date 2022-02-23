@@ -4,6 +4,8 @@
 \usetikzlibrary{shapes}
 \usepackage{calc}
 \usepackage{fontspec}
+\usepackage{array}
+\usepackage[type={CC}, version={4.0}, modifier={by}]{doclicense} % Add text and icons for creative commons license
 
 
 \newlength{\cardwidth}
@@ -31,9 +33,16 @@
 	\node[draw, ultra thick, circle, fill=#1, inner sep=0pt, minimum size=2in] () at (0,0) {};
 }}
 
+\tikzset{token2/.pic={
+	\node[draw, circle, fill=#1, inner sep=0pt, minimum size=2in] () at (0,0) {};
+}}
+
 \tikzset{smalltoken/.pic={
 	\node[draw, circle, minimum size=1in, ultra thick, fill=#1] () at (0,0) {};
+}}
 
+\tikzset{smalltoken2/.pic={
+	\node[draw, circle, minimum size=1in, fill=#1] () at (0,0) {};
 }}
 
 \tikzset{guidecross/.pic={
@@ -76,6 +85,34 @@
 	\pic () at (0.5,-0.5) {smalltoken={gray}};
 }}
 
+\tikzset{Northwest2/.pic={
+	\pic () at (-0.5,0.5) {smalltoken2={gray}};
+	\pic () at (0.5,0.5) {smalltoken2={white}};
+	\pic () at (-0.5,-0.5) {smalltoken2={white}};
+	\pic () at (0.5,-0.5) {smalltoken2={white}};
+}}
+
+\tikzset{Northeast2/.pic={
+	\pic () at (-0.5,0.5) {smalltoken2={white}};
+	\pic () at (0.5,0.5) {smalltoken2={gray}};
+	\pic () at (-0.5,-0.5) {smalltoken2={white}};
+	\pic () at (0.5,-0.5) {smalltoken2={white}};
+}}
+
+\tikzset{Southwest2/.pic={
+	\pic () at (-0.5,0.5) {smalltoken2={white}};
+	\pic () at (0.5,0.5) {smalltoken2={white}};
+	\pic () at (-0.5,-0.5) {smalltoken2={gray}};
+	\pic () at (0.5,-0.5) {smalltoken2={white}};
+}}
+
+\tikzset{Southeast2/.pic={
+	\pic () at (-0.5,0.5) {smalltoken2={white}};
+	\pic () at (0.5,0.5) {smalltoken2={white}};
+	\pic () at (-0.5,-0.5) {smalltoken2={white}};
+	\pic () at (0.5,-0.5) {smalltoken2={gray}};
+}}
+
 
 \tikzset{cardbackpattern/.pic={
 	\foreach \i in {-1.25, -1.0,...,1.25}
@@ -85,6 +122,16 @@
 	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
 		\foreach \j in {-1.875, -1.625, ..., 1.875}
 			\draw[very thick, #1] (\i,\j) circle (0.105);
+}}
+
+\tikzset{cardbackpattern2/.pic={
+	\foreach \i in {-1.25, -1.0,...,1.25}
+		\foreach \j in {-1.75, -1.5, ..., 1.75}
+			\draw[very thin, #1] (\i,\j) circle (0.105);
+
+	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
+		\foreach \j in {-1.875, -1.625, ..., 1.875}
+			\draw[very thin, #1] (\i,\j) circle (0.105);
 }}
 
 \tikzset{cardbackprintable/.pic={
@@ -116,9 +163,27 @@
 	\node[draw, ultra thick, rounded corners=0.125in, inner sep=0pt, minimum height=3.5in, minimum width=2.5in] () at (0,0) {};
 }}
 
+\tikzset{cardbackdisplay2/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2, 0in) --%
+	      (-\cardwidth/2, \cardheight/2) --%
+	      (\cardwidth/2, \cardheight/2) --%
+	      (\cardwidth/2, -\cardheight/2) --%
+	      (-\cardwidth/2, -\cardheight/2) --%
+	      cycle;
+	% Pattern for card back
+	\pic () at (0,0) {cardbackpattern2={#1}};
+\end{scope}
+	\node[draw, rounded corners=0.025in, inner sep=0pt, minimum height=3.5in, minimum width=2.5in] () at (0,0) {};
+}}
+
 \tikzset{colorcardfrontpattern/.pic={
-%	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5) {};
 	\pic () at (0,-0.5) {token={#1}};
+	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+}}
+
+\tikzset{colorcardfrontpattern2/.pic={
+	\pic () at (0,-0.5) {token2={#1}};
 	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 }}
 
@@ -140,11 +205,23 @@
 \tikzset{colorcardfrontdisplay/.pic={
 	\node[draw, ultra thick, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
 	\node[draw, circle, ultra thick, inner sep=0pt, minimum size=2in, fill=#1] () at (0,-0.5in) {};
+	\pic (0 at (0,-0.5in) {token={#1}};
+	\node () at (0, 1.125in) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+}}
+
+\tikzset{colorcardfrontdisplay2/.pic={
+	\node[draw, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.025in] () at (0,0) {};
+	\pic () at (0,-0.5in) {token2={#1}};
 	\node () at (0, 1.125in) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 }}
 
 \tikzset{positioncardfrontpattern/.pic={
 	\pic () at (0,-0.5) {#1};
+	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+}}
+
+\tikzset{positioncardfrontpattern2/.pic={
+	\pic () at (0,-0.5) {#12};
 	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 }}
 
@@ -167,4 +244,10 @@
 	% Pattern for card front
 	\pic () at (0,0) {positioncardfrontpattern={#1}};
 	\node[draw, inner sep=0pt, ultra thick, minimum height=3.5in, minimum width=2.5in, rounded corners=0.125in] () at (0,0) {};
+}}
+
+\tikzset{positioncardfrontdisplay2/.pic={
+	% Pattern for card front
+	\pic () at (0,0) {positioncardfrontpattern2={#1}};
+	\node[draw, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.025in] () at (0,0) {};
 }}
