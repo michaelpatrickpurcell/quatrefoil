@@ -32,31 +32,30 @@ You can end the game whenever you think that you have solved the puzzle. If you 
   3. Place the remaining colour card face down in the play area to one side of the quatrefoil. This card indicates which direction is _north_.
 
 ![Set Up Diagram](Images/setup_diagram.png)
-The play area after the set up is complete.
+_The play area after the set up is complete._
 
 ## Player turns
 On your turn you must take one _actions_:
   - __Push__ - Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil.
   ![Push Row Diagram](Images/push_row_diagram.png)
-  Pushing the free token into a row.
+  _Pushing the free token into a row._
 
   ![Push Column Diagram](Images/push_column_diagram.png)
-  Pushing the free token into a column.
+  _Pushing the free token into a column._
 
   Notice that this will also eject a token from the quatrefoil. The ejected token becomes the free token for the next player's turn.
 
   - __Twist__ - Rotate the quatrefoil by ninety degrees in either direction (clockwise or anticlockwise).
-  <!-- ![Twist animation](twist_animation.gif) -->
   ![Twist Clockwise Diagram](Images/twist_clockwise_diagram.png)
-  Twisting the quatrefoil clockwise.
+  _Twisting the quatrefoil clockwise._
 
   ![Twist Anticlockwise Diagram](Images/twist_anticlockwise_diagram.png)
-  Twisting the quatrefoil anticlockwise.
+  _Twisting the quatrefoil anticlockwise._
 
   - __Stack__ - Place the free token on top of the quatrefoil. The game ends immediately after any player takes this action.
 
   ![Stack Diagram](Images/stack_diagram.png)
-  Stacking the free token on the quatrefoil.
+  _Stacking the free token on the quatrefoil._
 
 ## Turn Order
 Play procceeds to the left (clockwise). That is, after you finish your turn the player to your left will go next.
