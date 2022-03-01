@@ -2,7 +2,7 @@
 
 This repository contains:
   - the [rules documents](RulesDocuments) needed to play Quatrefoil,
-  - the [print-and-play files](PnPFiles),
+  - the [print-and-play files](PnPFiles) needed to make a copy of Quatrefoil.
 
 __Contact__: quatrefoil.game@gmail.com
 
