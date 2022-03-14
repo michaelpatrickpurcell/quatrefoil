@@ -7,11 +7,11 @@ This repository contains:
 __Contact__: quatrefoil.game@gmail.com
 
 ## Overview
-Quatrefoil is a cooperative puzzle game for four players that can be played in 5-10 minutes. It is suitable for all ages, but is intended for players who are eight years old or older.
+Quatrefoil is a cooperative puzzle game for four players that can be played in 5-10 minutes. It is intended for players who are at least eight years old.
 
-During the game, you will work together to solve a puzzle. Communication is limited, however, so you you will need to be creative and attentive to effectively coordinate your efforts.
+During the game, you will work together to solve a puzzle. Communication is limited, so you will need to be creative and attentive to coordinate your efforts.
 
-You can end the game whenever you think that you have solved the puzzle. If you are right, then everyone wins.  If not, then everyone loses.
+You can end the game whenever you think that you have solved the puzzle. If you are right, everyone wins.  If not, everyone loses.
 
 ## Components
   - __Tokens__ (5) -  one circular token in five colours: blue, green, purple, red, yellow.
@@ -25,7 +25,7 @@ You can end the game whenever you think that you have solved the puzzle. If you 
   ![Position Cards Diagram](Images/position_cards_diagram.png)
 
 ## Set Up
-  1. Arrange four of the tokens in a square in the play area. This is the _quatrefoil_. The fifth token is the _free token_ and should be placed nearby.
+  1. Arrange any four of the tokens in a square in the play area. This is the _quatrefoil_. The fifth token is the _free token_ and should be placed nearby.
 
   2. Deal one colour card and one position card face down to each player. Players may look at their own cards, but not those dealt to other players.
 
@@ -35,7 +35,7 @@ You can end the game whenever you think that you have solved the puzzle. If you 
 _The play area after the set up is complete._
 
 ## Player turns
-On your turn you must take one _actions_:
+On your turn, take one of three possible _actions_:
   - __Push__ - Place the free token next to any row or column of the quatrefoil. Slide that entire row or column by pushing on the free token until it is part of the quatrefoil.
   ![Push Row Diagram](Images/push_row_diagram.png)
   _Pushing the free token into a row._
@@ -65,7 +65,7 @@ The colour cards and the position cards together specify the correct position fo
 
 The correct positions of four of the tokens are specified by the cards held by the players. These tokens should be in the quatrefoil. Your position card specifies the correct position in the quatrefoil for the token specified by your colour card.
 
-The remaining token should should be the free token. Because it should not be in the quatrefoil, it does not have an associated position card.
+The remaining token should be the free token. Because it should not be in the quatrefoil, it does not have an associated position card.
 
 ## Communication
 During the game, communication between players is strictly limited. At any time, you may only indicate whether your token is in the correct position or not.
