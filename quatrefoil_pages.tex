@@ -35,7 +35,7 @@
   afterskip=0ex,%,0.125\baselineskip,
 ]{section}
 
-\version{0.2}
+\version{1.0}
 \begin{document}
 {%
 \begin{center}
@@ -83,7 +83,7 @@ You can end the game whenever you think that you have solved the puzzle. If you 
 
 \section*{Components}
 \begin{description}[leftmargin=0pt, labelsep=\widthof{\ }]
-	\item[Tokens (5) \textendash] One circular token in five colours: blue, green, purple, red, yellow.
+	\item[Tokens (5) \textendash] One circular token in five colours.%: blue, green, purple, red, yellow.
 	\begin{center}
 	\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
 		\pic () at (0,0) {token2={Blue}};
@@ -95,23 +95,50 @@ You can end the game whenever you think that you have solved the puzzle. If you 
 	\end{center}
 	\item[Colour Cards (5) \textendash] One for each colour.
 	\begin{center}
+%	\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
+%		\pic at (0,0) {colorcardfrontdisplay2={Blue}};
+%		\pic at (3,0) {colorcardfrontdisplay2={Green}};
+%		\pic at (6,0) {colorcardfrontdisplay2={Purple}};
+%		\pic at (9,0) {colorcardfrontdisplay2={Red}};
+%		\pic at (12,0) {colorcardfrontdisplay2={Yellow}};
+%	\end{tikzpicture}
 	\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
-		\pic at (0,0) {colorcardfrontdisplay2={Blue}};
-		\pic at (3,0) {colorcardfrontdisplay2={Green}};
-		\pic at (6,0) {colorcardfrontdisplay2={Purple}};
-		\pic at (9,0) {colorcardfrontdisplay2={Red}};
-		\pic at (12,0) {colorcardfrontdisplay2={Yellow}};
+		\pic[rotate=-60, transform shape] at (0:1.5) {colorcardfrontdisplay2={Blue}};
+		\pic[rotate=-30, transform shape] at (45:1.5) {colorcardfrontdisplay2={Green}};
+		\pic[rotate=0, transform shape] at (90:1.5) {colorcardfrontdisplay2={Purple}};
+		\pic[rotate=30, transform shape] at (135:1.5) {colorcardfrontdisplay2={Red}};
+		\pic[rotate=60, transform shape] at (180:1.5) {colorcardfrontdisplay2={Yellow}};
 	\end{tikzpicture}
-	\end{center}
+	\qquad\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
+		\pic[rotate=-60, transform shape] at (0:1.5) {cardbackdisplay2={Red}};
+		\pic[rotate=-30, transform shape] at (45:1.5) {cardbackdisplay2={Red}};
+		\pic[rotate=0, transform shape] at (90:1.5) {cardbackdisplay2={Red}};
+		\pic[rotate=30, transform shape] at (135:1.5) {cardbackdisplay2={Red}};
+		\pic[rotate=60, transform shape] at (180:1.5) {cardbackdisplay2={Red}};
+	\end{tikzpicture}
+
+\end{center}
 	\item[Position Cards (4) \textendash] One for each of the ordinal directions: northwest, northeast, southwest, southeast.%The backs of the position cards are blue.
 	\begin{center}	
+%	\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
+%		\pic at (0,0) {positioncardfrontdisplay2={Northwest}};
+%		\pic at (3,0) {positioncardfrontdisplay2={Northeast}};
+%		\pic at (6,0) {positioncardfrontdisplay2={Southwest}};
+%		\pic at (9,0) {positioncardfrontdisplay2={Southeast}};
+%	\end{tikzpicture}
 	\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
-		\pic at (0,0) {positioncardfrontdisplay2={Northwest}};
-		\pic at (3,0) {positioncardfrontdisplay2={Northeast}};
-		\pic at (6,0) {positioncardfrontdisplay2={Southwest}};
-		\pic at (9,0) {positioncardfrontdisplay2={Southeast}};
+		\pic[rotate=-45, transform shape] at (0:1) {positioncardfrontdisplay2={Northwest}};
+		\pic[rotate=-15, transform shape] at (60:1) {positioncardfrontdisplay2={Northeast}};
+		\pic[rotate=15, transform shape] at (120:1) {positioncardfrontdisplay2={Southwest}};
+		\pic[rotate=45, transform shape] at (180:1) {positioncardfrontdisplay2={Southeast}};
 	\end{tikzpicture}
-	\end{center}
+	\qquad\begin{tikzpicture}[scale=0.1, transform shape, x=1in, y=1in]
+		\pic[rotate=-45, transform shape] at (0:1) {cardbackdisplay2={Blue}};
+		\pic[rotate=-15, transform shape] at (60:1) {cardbackdisplay2={Blue}};
+		\pic[rotate=15, transform shape] at (120:1) {cardbackdisplay2={Blue}};
+		\pic[rotate=45, transform shape] at (180:1) {cardbackdisplay2={Blue}};
+	\end{tikzpicture}
+\end{center}
 \end{description}
 \newpage
 \section*{Set Up}

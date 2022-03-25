@@ -171,7 +171,8 @@
 	      (\cardwidth/2, -\cardheight/2) --%
 	      (-\cardwidth/2, -\cardheight/2) --%
 	      cycle;
-	% Pattern for card back
+	\node[rounded corners=0.025in, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, fill=white] () at (0,0) {};
+% Pattern for card back
 	\pic () at (0,0) {cardbackpattern2={#1}};
 \end{scope}
 	\node[draw, rounded corners=0.025in, inner sep=0pt, minimum height=3.5in, minimum width=2.5in] () at (0,0) {};
@@ -210,7 +211,7 @@
 }}
 
 \tikzset{colorcardfrontdisplay2/.pic={
-	\node[draw, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.025in] () at (0,0) {};
+	\node[draw, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.025in, fill=white] () at (0,0) {};
 	\pic () at (0,-0.5in) {token2={#1}};
 	\node () at (0, 1.125in) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 }}
@@ -221,8 +222,8 @@
 }}
 
 \tikzset{positioncardfrontpattern2/.pic={
-	\pic () at (0,-0.5) {#12};
-	\node () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
+	\pic[transform shape] () at (0,-0.5) {#12};
+	\node[transform shape] () at (0, 1.125) {{\setmainfont[Scale=1.33]{Quattrocento} \Huge #1}};
 }}
 
 \tikzset{positioncardfrontprintable/.pic={
@@ -248,6 +249,6 @@
 
 \tikzset{positioncardfrontdisplay2/.pic={
 	% Pattern for card front
-	\pic () at (0,0) {positioncardfrontpattern2={#1}};
-	\node[draw, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.025in] () at (0,0) {};
+	\node[draw, inner sep=0pt, minimum height=3.5in, minimum width=2.5in, rounded corners=0.025in, fill=white] () at (0,0) {};
+	\pic[transform shape] () at (0,0) {positioncardfrontpattern2={#1}};
 }}
